@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Thrift::API::HiveClient;
+# ABSTRACT: A Hadoop Hive client using the Thrift API
 use Moo;
 use Thrift;
 use Thrift::Socket;
