@@ -6,7 +6,7 @@ Thrift::API::HiveClient - A Hadoop Hive client using the Thrift API
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 DESCRIPTION
 
