@@ -1,3 +1,5 @@
+=pod
+
 =head1 NAME
 
 Thrift::API::HiveClient - A Hadoop Hive client using the Thrift API
@@ -5,6 +7,61 @@ Thrift::API::HiveClient - A Hadoop Hive client using the Thrift API
 =head1 VERSION
 
 version 0.001
+
+=head1 ATTRIBUTES
+
+=head2 host
+
+The host on which the hiveserver process is running. Should be a
+valid hostname or IP address. I<required>, I<immutable>
+
+=head2 port
+
+The TCP port on which the hiveserver process is listening. Should be
+a valid port number. I<required>, I<immutable>
+
+=head1 METHODS
+
+=head2 new( ... )
+
+Standard object constructor. Arguments are the attributes described above. For example:
+
+  my $cli = Thrift::API::HiveClient->new( host => 'localhost', port => 10000 );
+
+=head2 connect( )
+
+Connect to the configured hiveserver.
+
+=head1 THRIFT API METHODS
+
+These are the methods exposed by the Thrift API. The HiveClient object simply acts
+as a proxy for all the methods available on the (underlying) ThriftHiveClient object.
+
+However, for your convenience, all these methods are documented here, as well as I can.
+
+=head2 execute( $hql )
+
+The given HQL statement is sent to the hiveserver and executed. The results can be
+retrieved by using the fetch* methods.
+
+  $cli->execute('select * from foo');
+
+=head2 fetchAll( )
+
+All results from a previous call to execute() are returned as an array
+
+  my $res = $cli->fetchAll();
+
+=head2 getClusterStatus( )
+
+Returns an object (blessed hash) showing some of the status of the Hadoop cluster.
+
+=head2 get_fields( $db_name, $tbl_name );
+
+Returns an array of FieldSchema objects with info about the fields in the given
+table in the given database.
+
+  my $tbl_schema = $cli->get_fields( 'default', 'foo' );
 
 =head1 AUTHOR
 

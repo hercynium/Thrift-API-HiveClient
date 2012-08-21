@@ -34,3 +34,4 @@ blib/
 *.tdy
 *.bak
 build/
+.build/
