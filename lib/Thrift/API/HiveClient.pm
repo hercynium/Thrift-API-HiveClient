@@ -210,51 +210,93 @@ table in the given database.
 
 =head2 get_partition_names( $db_name, $tbl_name, $max_parts )
 
+
 =head2 get_partitions_ps
+
 =head2 get_partitions_ps_with_auth
+
 =head2 get_partition_names_ps
+
 =head2 get_partitions_by_filter
+
 =head2 alter_partition
 
 =head2 get_config_value( $name, $default )
 
 =head2 partition_name_to_vals
+
 =head2 partition_name_to_spec
+
 =head2 add_index
+
 =head2 alter_index
+
 =head2 drop_index_by_name
+
 =head2 get_index_by_name
+
 =head2 get_indexes
+
 =head2 get_index_names
+
 =head2 create_role
+
 =head2 drop_role
+
 =head2 get_role_names
+
 =head2 grant_role
+
 =head2 revoke_role
+
 =head2 list_roles
+
 =head2 get_privilege_set
+
 =head2 list_privileges
+
 =head2 grant_privileges
+
 =head2 revoke_privileges
+
 =head2 get_delegation_token
+
 =head2 get_delegation_token_with_signature
+
 =head2 renew_delegation_token
+
 =head2 cancel_delegation_token
+
+
 
 =head1 METHODS FROM FacebookService
 
+
+
 =head2 getName
+
 =head2 getVersion
+
 =head2 getStatus
+
 =head2 getStatusDetails
+
 =head2 getCounters
+
 =head2 getCounter
+
 =head2 setOption
+
 =head2 getOption
+
 =head2 getOptions
+
 =head2 getCpuProfile
+
 =head2 aliveSince
+
 =head2 reinitialize
+
 =head2 shutdown
 
 
